@@ -3,6 +3,8 @@ import Root from "../Root/Root";
 import Hoom from "../Home/Hoom";
 import AllBooksCard from "../Pages/AllBooksCard";
 import AddBooks from "../Pages/AddBooks";
+import BooksList from "../Pages/BooksList";
+import BorrowSummary from "../Pages/BorrowSummary";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/addbooks",
         element: <AddBooks />,
+      },
+      {
+        path: "/bookslist",
+        element: <BooksList />,
+      },
+      {
+        path: "/borrowsummary",
+        element: <BorrowSummary />,
       },
     ],
   },

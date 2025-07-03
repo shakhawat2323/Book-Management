@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "The Subtle Art of Not Giving a F*ck",
     "author": "Mark Manson",
     "genre": "Self-help",
@@ -12,7 +11,6 @@
     "img": "https://m.media-amazon.com/images/I/71QKQ9mwV7L.jpg"
   },
   {
-    "id": 2,
     "title": "Atomic Habits",
     "author": "James Clear",
     "genre": "Self-help",
@@ -24,7 +22,6 @@
     "img": "https://m.media-amazon.com/images/I/513Y5o-DYtL.jpg"
   },
   {
-    "id": 3,
     "title": "Becoming",
     "author": "Michelle Obama",
     "genre": "Memoir",
@@ -36,7 +33,6 @@
     "img": "https://m.media-amazon.com/images/I/81h2gWPTYJL.jpg"
   },
   {
-    "id": 4,
     "title": "1984",
     "author": "George Orwell",
     "genre": "Dystopian",
@@ -48,7 +44,6 @@
     "img": "https://m.media-amazon.com/images/I/71kxa1-0mfL.jpg"
   },
   {
-    "id": 5,
     "title": "The Alchemist",
     "author": "Paulo Coelho",
     "genre": "Adventure",
@@ -60,7 +55,6 @@
     "img": "https://m.media-amazon.com/images/I/51Z0nLAfLmL.jpg"
   },
   {
-    "id": 6,
     "title": "Rich Dad Poor Dad",
     "author": "Robert Kiyosaki",
     "genre": "Finance",
@@ -72,7 +66,6 @@
     "img": "https://m.media-amazon.com/images/I/81bsw6fnUiL.jpg"
   },
   {
-    "id": 7,
     "title": "Sapiens",
     "author": "Yuval Noah Harari",
     "genre": "History",
@@ -84,7 +77,6 @@
     "img": "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg"
   },
   {
-    "id": 8,
     "title": "Educated",
     "author": "Tara Westover",
     "genre": "Memoir",
@@ -96,7 +88,6 @@
     "img": "https://m.media-amazon.com/images/I/81WojUxbbFL.jpg"
   },
   {
-    "id": 9,
     "title": "The Power of Now",
     "author": "Eckhart Tolle",
     "genre": "Spirituality",
@@ -108,7 +99,6 @@
     "img": "https://m.media-amazon.com/images/I/71aFt4+OTOL.jpg"
   },
   {
-    "id": 10,
     "title": "To Kill a Mockingbird",
     "author": "Harper Lee",
     "genre": "Classic",
@@ -120,7 +110,6 @@
     "img": "https://m.media-amazon.com/images/I/81OdwZG6APL.jpg"
   },
   {
-    "id": 11,
     "title": "Thinking, Fast and Slow",
     "author": "Daniel Kahneman",
     "genre": "Psychology",
@@ -132,7 +121,6 @@
     "img": "https://m.media-amazon.com/images/I/71c8RT16JrL.jpg"
   },
   {
-    "id": 12,
     "title": "The Four Agreements",
     "author": "Don Miguel Ruiz",
     "genre": "Self-help",
@@ -144,7 +132,6 @@
     "img": "https://m.media-amazon.com/images/I/81Mxun+6pEL.jpg"
   },
   {
-    "id": 13,
     "title": "The Book Thief",
     "author": "Markus Zusak",
     "genre": "Historical Fiction",
@@ -156,7 +143,6 @@
     "img": "https://m.media-amazon.com/images/I/81z2O2XTqHL.jpg"
   },
   {
-    "id": 14,
     "title": "Can't Hurt Me",
     "author": "David Goggins",
     "genre": "Motivational",
@@ -168,7 +154,6 @@
     "img": "https://m.media-amazon.com/images/I/61cWZgUNaGL.jpg"
   },
   {
-    "id": 15,
     "title": "The Psychology of Money",
     "author": "Morgan Housel",
     "genre": "Finance",
@@ -180,7 +165,6 @@
     "img": "https://m.media-amazon.com/images/I/71g2ednj0JL.jpg"
   },
   {
-    "id": 16,
     "title": "Dune",
     "author": "Frank Herbert",
     "genre": "Science Fiction",
@@ -192,7 +176,6 @@
     "img": "https://m.media-amazon.com/images/I/91A6QYrNnKL.jpg"
   },
   {
-    "id": 17,
     "title": "The Catcher in the Rye",
     "author": "J.D. Salinger",
     "genre": "Classic",
@@ -204,7 +187,6 @@
     "img": "https://m.media-amazon.com/images/I/81OthjkJBuL.jpg"
   },
   {
-    "id": 18,
     "title": "The Midnight Library",
     "author": "Matt Haig",
     "genre": "Fantasy",
@@ -216,7 +198,6 @@
     "img": "https://m.media-amazon.com/images/I/81eB+7+CkUL.jpg"
   },
   {
-    "id": 19,
     "title": "The 48 Laws of Power",
     "author": "Robert Greene",
     "genre": "Strategy",
@@ -228,7 +209,6 @@
     "img": "https://m.media-amazon.com/images/I/71HMyqG6MRL.jpg"
   },
   {
-    "id": 20,
     "title": "Deep Work",
     "author": "Cal Newport",
     "genre": "Productivity",

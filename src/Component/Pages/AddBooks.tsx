@@ -7,9 +7,14 @@ import {
   Select,
   FormControl,
 } from "@mui/material";
+import { useCreatebooksMutation } from "../Redux/BooksApi/booksApi";
+import { createApi } from "@reduxjs/toolkit/query/react";
+import { toast } from "sonner";
+import Loding from "./Loding";
 
 const AddBooks = () => {
-  const handalfrom = (e) => {
+  const [createApi, { data, isLoading, isError }] = useCreatebooksMutation();
+  const handalfrom = async (e) => {
     e.preventDefault();
     const form = e.target;
     const title = form.title.value;
@@ -34,8 +39,17 @@ const AddBooks = () => {
       description,
     };
     console.log(Books);
+    if (isLoading) {
+      return <Loding />;
+    }
+    const res = await createApi(Books).unwrap;
+    form.reset();
+    console.log(res);
+    toast("data add ");
   };
+  // const { data, isLoading, isError } = useGetBooksQuery(undefined);
 
+  console.log({ data, isLoading, isError });
   return (
     <div className="mt-32 mb-20 w-11/12 max-w-5xl mx-auto">
       <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
@@ -77,7 +91,7 @@ const AddBooks = () => {
             type="number"
           />
           <TextField fullWidth label="Price ($)" name="price" type="number" />
-          <TextField fullWidth label="Image URL" name="img" />
+          <TextField fullWidth label="Image URL" name="img" type="url" />
           <TextField
             className="lg:!w-[1020px]"
             label="Description"
