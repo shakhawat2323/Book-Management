@@ -1,3 +1,4 @@
+import type { BookData } from "@/type";
 import { useGetborrowQuery } from "../Redux/BooksApi/booksApi";
 import Loding from "./Loding";
 
@@ -21,8 +22,8 @@ const BorrowSummary = () => {
             </tr>
           </thead>
           <tbody>
-            {data?.data?.map((datas, inx) => (
-              <tr key={datas._id}>
+            {data?.data?.map((datas: BookData, inx: number) => (
+              <tr key={inx}>
                 <td className="p-3">{inx + 1}</td>
                 <td className="p-3">{datas.book?.title}</td>
                 <td className="p-3 hidden sm:table-cell">{datas.book?.isbn}</td>

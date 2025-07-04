@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         element: <BorrowSummary />,
       },
       {
-        path: "/booksdetails:id",
+        path: "/booksdetails/:id",
         element: <BookDetails />,
       },
     ],

@@ -16,6 +16,7 @@ import { useNavigate } from "react-router";
 const BooksList = () => {
   const { data: books, isLoading } = useGetBooksQuery(undefined);
   const [deleteBook, { isLoading: deleteLoading }] = useDeleteBookMutation();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [updateBook, { isLoading: updateLoading }] = useUpdateBooksMutation();
   const [createborrow, { isLoading: loding }] = useCreateborrowMutation();
   const [selectedBook, setSelectedBook] = useState(null);
@@ -32,7 +33,7 @@ const BooksList = () => {
       toast("Delete failed");
     }
   };
-
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -53,36 +54,13 @@ const BooksList = () => {
     try {
       await updateBook(updatedBook).unwrap();
       toast("Book updated successfully");
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (document.getElementById("Updatebooks") as any).close();
       setSelectedBook(null);
     } catch (err) {
       toast("Update failed");
     }
   };
-
-  // const handleBorrowSubmits = async (e) => {
-  //   e.preventDefault();
-  //   const form = e.target;
-
-  //   const borrowData = {
-  //     book: borrowBook?._id,
-  //     quantity: parseInt(form.quantity.value),
-  //     dueDate: form.dueDate.value,
-  //   };
-  //   console.log(borrowData);
-  //   try {
-  //     const res = await createborrow(borrowData).unwrap();
-
-  //     toast("Book borrowed successfully");
-  //     form.reset();
-  //     setBorrowBook(null);
-  //     Navigate("/borrowsummary")(
-  //       document.getElementById("BrrowBooks") as any
-  //     ).close();
-  //   } catch (err) {
-  //     toast("Borrow failed");
-  //   }
-  // };
 
   const handleBorrowSubmits = async (e) => {
     e.preventDefault();
@@ -95,16 +73,16 @@ const BooksList = () => {
     };
 
     try {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const res = await createborrow(borrowData).unwrap();
 
       toast("Book borrowed successfully");
       form.reset();
       setBorrowBook(null);
 
-      // ✅ First close modal
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (document.getElementById("BrrowBooks") as any).close();
 
-      // ✅ Then navigate
       navigate("/borrowsummary");
     } catch (err) {
       toast("Borrow failed");

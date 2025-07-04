@@ -1,4 +1,3 @@
-import React from "react";
 import HeroImg from "../../assets/Img/HeroImg.jpg";
 import { Button } from "@/components/ui/button";
 const Heror = () => {

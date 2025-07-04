@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+
 import {
   Card,
   CardContent,
@@ -18,9 +18,11 @@ import {
 } from "@/components/ui/pagination";
 import { useGetBooksQuery } from "../Redux/BooksApi/booksApi";
 import Loding from "./Loding";
+import { NavLink } from "react-router";
 
 const AllBooksCard = () => {
   const { data: books, isLoading } = useGetBooksQuery(undefined);
+
   const [currentPage, setCurrentPage] = useState(1);
 
   if (isLoading) {
@@ -72,16 +74,15 @@ const AllBooksCard = () => {
                   </p>
                   <p className="text-sm mb-3">
                     <span className="font-semibold">Available:</span>{" "}
-                    {book.available ? (
-                      <span className="text-green-600">Yes</span>
-                    ) : (
-                      <span className="text-red-500">No</span>
-                    )}
+                    {book.available}
                   </p>
                   <div className="flex justify-end">
-                    <Button className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full shadow transition duration-300 hover:from-purple-600 hover:to-indigo-500">
+                    <NavLink
+                      to={`/booksdetails/${book._id}`}
+                      className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-purple-600 hover:to-indigo-500 text-white text-sm px-6 py-2 rounded-full shadow-md transition duration-300"
+                    >
                       Details
-                    </Button>
+                    </NavLink>
                   </div>
                 </CardContent>
               </Card>

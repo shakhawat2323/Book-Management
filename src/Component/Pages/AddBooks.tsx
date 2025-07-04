@@ -1,20 +1,20 @@
 import {
   TextField,
   Button,
-  Box,
   MenuItem,
   InputLabel,
   Select,
   FormControl,
 } from "@mui/material";
 import { useCreatebooksMutation } from "../Redux/BooksApi/booksApi";
-import { createApi } from "@reduxjs/toolkit/query/react";
+
 import { toast } from "sonner";
 import Loding from "./Loding";
 
 const AddBooks = () => {
   const [createApi, { data, isLoading, isError }] = useCreatebooksMutation();
-  const handalfrom = async (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handalfrom = async (e: any) => {
     e.preventDefault();
     const form = e.target;
     const title = form.title.value;
@@ -47,7 +47,6 @@ const AddBooks = () => {
     console.log(res);
     toast("data add ");
   };
-  // const { data, isLoading, isError } = useGetBooksQuery(undefined);
 
   console.log({ data, isLoading, isError });
   return (
@@ -57,11 +56,7 @@ const AddBooks = () => {
       </h2>
 
       <form onSubmit={handalfrom}>
-        <Box
-          noValidate
-          autoComplete="off"
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <TextField fullWidth label="Title" name="title" required />
           <TextField fullWidth label="Author" name="author" required />
 
@@ -105,7 +100,7 @@ const AddBooks = () => {
               Add Book
             </Button>
           </div>
-        </Box>
+        </div>
       </form>
     </div>
   );

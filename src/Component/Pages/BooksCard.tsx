@@ -9,7 +9,7 @@ import {
 import { Fade } from "react-awesome-reveal";
 import { useGetBooksQuery } from "../Redux/BooksApi/booksApi";
 import Loding from "./Loding";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const BooksCards = () => {
   const { data: books, isLoading } = useGetBooksQuery(undefined);
@@ -28,9 +28,11 @@ const BooksCards = () => {
           Discover Your Next Book
         </p>
 
-        <Button className="text-sm font-bold hover:bg-purple-600 hover:text-black transition duration-500">
-          View All Book
-        </Button>
+        <Link to="/allbooks">
+          <Button className="text-sm font-bold hover:bg-purple-600 hover:text-black transition duration-500">
+            View All Book
+          </Button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">

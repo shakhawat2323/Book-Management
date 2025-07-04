@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FacebookIcon,
   TwitterIcon,
@@ -18,7 +17,7 @@ const Footer = () => {
           </span>
         </h2>
 
-        <div className="flex justify-center items-center gap-2 max-w-md mx-auto">
+        <div className="flex justify-center items-center gap-2  mt-10 max-w-md mx-auto">
           <input
             type="email"
             placeholder="Enter your email"
