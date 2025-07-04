@@ -12,11 +12,12 @@ const Footer = () => {
       {/* Newsletter Section */}
       <div className="text-center px-4">
         <h2 className="text-2xl md:text-3xl font-semibold mb-2">
-          Sign Up for Our Newsletter
+          Sign Up for Our{" "}
+          <span className="text-2xl font-semibold text-white tracking-wide">
+            Book<span className="text-red-500 text-2xl">Bazar</span>
+          </span>
         </h2>
-        <p className="text-gray-400 mb-6">
-          Fermentum tempor cubilia risus tellus massa dis consectetur dolor.
-        </p>
+
         <div className="flex justify-center items-center gap-2 max-w-md mx-auto">
           <input
             type="email"

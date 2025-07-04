@@ -23,14 +23,12 @@ const Authorbooks = () => {
               Writing books makes the <br /> world go round
             </h2>
             <p className="text-gray-600 text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Writing books makes the world go round by inspiring minds,
+              preserving knowledge, sparking imagination, and connecting people
+              across generations. Books shape culture, educate, and empower us
+              to dream and grow endlessly.
             </p>
-            <p className="text-gray-800 font-semibold text-sm md:text-base">
-              Interdum donec fringilla consectetur senectus proin odio ultrices
-              tincidunt. Leo molestie bibendum eget aenean vulputate taciti
-              proin volutpat purus.
-            </p>
+
             <button className="mt-4 bg-red-500 text-white font-bold text-sm py-2 px-5 rounded-full hover:bg-red-600 transition">
               DISCOVER MORE
             </button>
@@ -65,8 +63,9 @@ const Authorbooks = () => {
               It is more than just writing books
             </h2>
             <p className="text-gray-600 text-sm md:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              It is more than just writing books — it's about sharing stories,
+              preserving wisdom, inspiring generations, and building bridges
+              between hearts and minds. Every word written can change a life.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
@@ -76,7 +75,8 @@ const Authorbooks = () => {
                 <div>
                   <h4 className="font-semibold text-black">Publishing</h4>
                   <p className="text-gray-600 text-sm">
-                    Maecenas etiam platea et hac viverra aliquam magnis sapien.
+                    Publishing is more than printing words — it's the powerful
+                    process of bringing ideas,
                   </p>
                 </div>
               </div>
@@ -87,7 +87,8 @@ const Authorbooks = () => {
                 <div>
                   <h4 className="font-semibold text-black">Selling Book</h4>
                   <p className="text-gray-600 text-sm">
-                    Maecenas etiam platea et hac viverra aliquam magnis sapien.
+                    t's about connecting readers with knowledge, imagination,
+                    and inspiration
                   </p>
                 </div>
               </div>
@@ -98,7 +99,8 @@ const Authorbooks = () => {
                 <div>
                   <h4 className="font-semibold text-black">Editing</h4>
                   <p className="text-gray-600 text-sm">
-                    Maecenas etiam platea et hac viverra aliquam magnis sapien.
+                    Editing is more than correcting grammar — it's the art of
+                    refining ideas, shaping stories, and amplifying voices
                   </p>
                 </div>
               </div>
@@ -109,7 +111,9 @@ const Authorbooks = () => {
                 <div>
                   <h4 className="font-semibold text-black">Community</h4>
                   <p className="text-gray-600 text-sm">
-                    Maecenas etiam platea et hac viverra aliquam magnis sapien.
+                    It fosters collaboration, support, and growth, creating a
+                    space where stories thrive and voices are celebrated
+                    together.
                   </p>
                 </div>
               </div>

@@ -11,6 +11,7 @@ const Hoom = () => {
       <BooksCards />
       <Booksimg />
       <Authorbooks />
+
       {/* <RGBSpiralCircle /> */}
     </div>
   );

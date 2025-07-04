@@ -11,6 +11,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Box, TextField } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const BooksList = () => {
   const { data: books, isLoading } = useGetBooksQuery(undefined);
@@ -19,7 +20,7 @@ const BooksList = () => {
   const [createborrow, { isLoading: loding }] = useCreateborrowMutation();
   const [selectedBook, setSelectedBook] = useState(null);
   const [borrowBook, setBorrowBook] = useState(null);
-
+  const navigate = useNavigate();
   if (isLoading) return <Loding />;
 
   const handleDelete = async (id: string) => {
@@ -41,9 +42,9 @@ const BooksList = () => {
       title: form.title.value,
       author: form.author.value,
       genre: form.genre.value,
-      isbn: form.isbn.value,
+      isbn: parseInt(form.isbn.value),
       copies: parseInt(form.copies.value),
-      available: form.available.value.toLowerCase() === "yes",
+      available: parseInt(form.available.value),
       price: parseFloat(form.price.value),
       img: form.img.value,
       description: form.description.value,
@@ -55,10 +56,33 @@ const BooksList = () => {
       (document.getElementById("Updatebooks") as any).close();
       setSelectedBook(null);
     } catch (err) {
-      console.error("Update failed", err);
       toast("Update failed");
     }
   };
+
+  // const handleBorrowSubmits = async (e) => {
+  //   e.preventDefault();
+  //   const form = e.target;
+
+  //   const borrowData = {
+  //     book: borrowBook?._id,
+  //     quantity: parseInt(form.quantity.value),
+  //     dueDate: form.dueDate.value,
+  //   };
+  //   console.log(borrowData);
+  //   try {
+  //     const res = await createborrow(borrowData).unwrap();
+
+  //     toast("Book borrowed successfully");
+  //     form.reset();
+  //     setBorrowBook(null);
+  //     Navigate("/borrowsummary")(
+  //       document.getElementById("BrrowBooks") as any
+  //     ).close();
+  //   } catch (err) {
+  //     toast("Borrow failed");
+  //   }
+  // };
 
   const handleBorrowSubmits = async (e) => {
     e.preventDefault();
@@ -69,16 +93,20 @@ const BooksList = () => {
       quantity: parseInt(form.quantity.value),
       dueDate: form.dueDate.value,
     };
-    console.log(borrowData);
+
     try {
       const res = await createborrow(borrowData).unwrap();
-      console.log(res);
+
       toast("Book borrowed successfully");
       form.reset();
       setBorrowBook(null);
+
+      // ✅ First close modal
       (document.getElementById("BrrowBooks") as any).close();
+
+      // ✅ Then navigate
+      navigate("/borrowsummary");
     } catch (err) {
-      console.error("Borrow failed", err);
       toast("Borrow failed");
     }
   };
@@ -191,6 +219,7 @@ const BooksList = () => {
             <TextField
               fullWidth
               name="isbn"
+              type="number"
               label="ISBN"
               defaultValue={selectedBook?.isbn || ""}
             />
@@ -205,7 +234,8 @@ const BooksList = () => {
               fullWidth
               name="available"
               label="Available"
-              defaultValue={selectedBook?.available ? "Yes" : "No"}
+              type="number"
+              defaultValue={selectedBook?.available || 0}
             />
             <TextField
               fullWidth
@@ -246,43 +276,7 @@ const BooksList = () => {
           </div>
         </form>
       </dialog>
-      {/* 🔧 Brrow books Modal (Always Rendered) */}
-      {/* <dialog id="BrrowBooks" className="modal">
-        <form className="modal-box p-6 grid gap-4">
-          <h3 className="font-bold text-xl mb-4">Add New Book</h3>
 
-          <TextField fullWidth label="Book ID" name="bookId" required />
-
-          <TextField
-            fullWidth
-            label="Quantity"
-            name="quantity"
-            required
-            type="number"
-          />
-
-          <TextField
-            fullWidth
-            label="Due Date"
-            name="dueDate"
-            type="datetime-local"
-            required
-          />
-
-          <div className="modal-action">
-            <Button
-              onClick={() =>
-                (document.getElementById("BrrowBooks") as any).close()
-              }
-            >
-              Cancel
-            </Button>
-            <Button type="submit" color="primary">
-              Add Book
-            </Button>
-          </div>
-        </form>
-      </dialog> */}
       <dialog id="BrrowBooks" className="modal">
         <form
           onSubmit={handleBorrowSubmits}

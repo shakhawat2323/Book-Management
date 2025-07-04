@@ -14,7 +14,7 @@ const Heror = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="w-full md:w-1/2 space-y-4">
             <p className="uppercase text-sm tracking-wider text-white/90 animate__animated animate__fadeInLeft animate__delay-1s">
-              Sale up to 20% off
+              Welcome to Booksbazar
             </p>
             <h1 className="text-5xl font-bold text-white leading-tight animate__animated animate__fadeInDown animate__delay-1s">
               Grab your next <br /> favorite book
@@ -24,8 +24,8 @@ const Heror = () => {
               most accessible and wisest of counselors, and the most patient of
               teachers
             </p>
-            <Button className="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-full mt-4 animate__animated animate__zoomIn animate__delay-3s">
-              GO TO SHOP
+            <Button className="inline-block bg-red-500 hover:bg-red-600 text-white font-semibold px-6  rounded-full mt-4 animate__animated animate__zoomIn animate__delay-3s">
+              Read to books
             </Button>
           </div>
         </div>
