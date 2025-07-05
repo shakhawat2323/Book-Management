@@ -1,4 +1,4 @@
-# 📚 Minimal Library Management System
+# 📚 BookBazar
 
 A clean and functional client-side application for managing books and borrow records in a library. Built using **React**, **Redux Toolkit Query (RTK Query)**, and **TypeScript**, this system enables basic library operations like viewing books, adding new ones, updating and deleting them, borrowing, and tracking borrowed book summaries — all without requiring authentication.
 
